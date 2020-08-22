@@ -1,0 +1,186 @@
+<!-- Exercising Myself on Flex Box Knowledge -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Structure</title>
+  <style>
+    *, *::before, *::after{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body{
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .container{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar{
+      background-color: bisque;
+      height: 18vh;
+      width: 100%;
+      padding: 20px;
+    }
+
+    .nav-links h3{
+      font-size: 45px;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .nav-links h4{
+      font-size: 16px;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      position: relative;
+      top: 55px;
+      right: 36em; /* Or 35.3em */
+    }
+    
+    .nav-links{
+      display: flex;
+      gap: 19px;
+    }
+
+    .nav-links a{
+      text-decoration: none;
+      font-size: 23px;
+      color: rgb(1, 21, 43);
+      padding: 10px;
+      border: 2px solid transparent;
+      position: relative;
+      left: 33em;
+    }
+
+    .nav-links a:hover{
+      background-color: transparent;
+      border-radius: 7px;
+      border-color:black;
+    }
+
+    .content{
+      background-color: aqua;
+      height: 51.4vh;
+      width: 100%;
+      display: flex;
+    }
+
+    .content .left-side{
+      background-color: red;
+      width: 25%;
+    }
+
+    .main-side h4{
+      text-align: center !important;
+    }
+
+    .footer{
+      background-color: blueviolet;
+      height: 25vh;
+      width: 100%;
+      text-align:center;
+      display: flex;
+    }
+
+    .footer-section{
+      width: 33.3%;
+    }
+
+    .footer .section-1{
+      border-right: 2px solid white;
+    }
+
+    .footer .section-2{
+      border-right: 2px solid white;
+    }
+
+    .label{
+      text-align: center;
+    }
+
+    .switchBtn{
+      width: 200px;
+      height: 30px;
+      padding: 12px;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .show{
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+<!-- Body Start -->
+  <div class="container">
+<!-- Nav Bar Section -->
+    <div class="navbar">
+      <nav class="nav-links">
+<!-- Client Logo/Name -->
+        <h3>TIIDELAB</h3>
+        <p><a href="">Home</a></p>
+        <p><a href="">Contact</a></p>
+        <p><a href="">Show Room</a></p>
+        <h4>Think, Ideate, Innovate, Develop, Execute Lab</h4>
+      </nav>
+    </div>
+
+<!-- Section Indicator -->
+      <h1 class="label">Body</h1>
+    <div class="show">
+      <br>
+      <button class="switchBtn" onclick="flexBody()">Click To Flex Body</button>
+      <br>
+      <button class="switchBtn" onclick="switchFlex()">Click To switch Body</button>
+      <br>
+    </div>
+
+<!-- Main Body Section -->
+    <div class="content">
+<!-- Left Side Body for advert or Links -->
+      <div class="left-side">
+        <h1>Left Side</h1>
+      </div>
+<!-- Main body showing the page content -->
+      <div class="main-side">
+        <h1>Main Side</h1>
+      </div>
+    </div>
+
+<!-- Section Indicator -->
+    <h3 class="label">Footer</h3>
+  
+<!-- Footer Section -->
+    <div class="footer">
+<!-- Section for social links -->
+      <div class="footer-section section-1">
+        <h4>section-1</h4>
+      </div>
+<!-- Section For Form -->
+      <div class="footer-section section-2">
+        <h4>section-2</h4>
+      </div>
+<!-- Section for another client's choice -->
+      <div class="footer-section section-3">
+        <h4>Section-3</h4>
+      </div>
+    </div>
+  </div>
+<!-- Body End -->
+<!-- Script -->
+<script>
+  function flexBody(){
+    document.querySelector('body').style.display='flex';
+  }
+  function switchFlex(){
+    document.querySelector('body').style.display='';
+  }
+</script>
+</body>
+</html>
